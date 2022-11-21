@@ -89,7 +89,7 @@ namespace LinkedListProblems
             }
             this.head = this.head.next;
         }
-        public void RemoveLastNode()
+        public void RemoveLastNode() // 70 will be removed
         {
             if (head == null)
             {
@@ -105,6 +105,25 @@ namespace LinkedListProblems
                 NewNode = NewNode.next;
             }
             NewNode.next = null;
+        }
+        public int Search(int value)
+        {
+            Node node = this.head;
+            if (node == null)
+                Console.WriteLine(value + " is not found");
+
+            return -1;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
         }
     }
 }

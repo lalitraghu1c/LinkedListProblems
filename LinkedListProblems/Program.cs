@@ -7,7 +7,11 @@ namespace LinkedListProblems
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Linkedlist problem Statement");
+            Console.WriteLine("Welcome to Linked List problem Statement");
+            LinkedList linkedList = new LinkedList();
+            linkedList.Add(56);
+            linkedList.Add(30);
+            linkedList.Add(70);
         }
     }
 }

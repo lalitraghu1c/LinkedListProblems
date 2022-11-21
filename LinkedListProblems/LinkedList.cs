@@ -106,13 +106,11 @@ namespace LinkedListProblems
             }
             NewNode.next = null;
         }
-        public int Search(int value)
+        public int Search(int value) // 30 will be searched with position 1
         {
             Node node = this.head;
             if (node == null)
-                Console.WriteLine(value + " is not found");
-
-            return -1;
+                return -1;
             int count = 0;
             while (node != null)
             {
@@ -124,6 +122,23 @@ namespace LinkedListProblems
                 count++;
             }
             return count;
+        }
+        public void Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("Length of the Linkedlist is :- " + count);
         }
     }
 }
